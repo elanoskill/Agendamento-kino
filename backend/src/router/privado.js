@@ -9,6 +9,6 @@ const router = express.Router();
 router.use("/usuario",auth,controllerPrivado);
 router.use("/produto", auth, controllerProduto);
 router.use("/listar",auth,listarReclamacao);
-router.use("/pedido",auth,pedido);
+router.use("/pedido",pedido);
 router.use('/funcionario',auth,funcionario);
 export default router;
