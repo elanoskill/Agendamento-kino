@@ -22,7 +22,7 @@
     left: 0;
     height: 100vh;
     z-index: -1;
-    background-image: url(../../../public/kinoDelivery.png);
+    background-image: url(../../../public/kino\ delivery.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -190,7 +190,7 @@
     left: 0;
     height: 100vh;
     z-index: -1;
-    background-image: url(../../../public/kinoDelivery.png);
+    background-image: url(../../../public/kino\ delivery.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -366,7 +366,7 @@
     width: 50%;
     border-radius: 20px;
     margin: 0 10px;
-    background-image: url(../../../public/kinoDelivery.png);
+    background-image: url(../../../public/kino\ delivery.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
