@@ -55,3 +55,7 @@ export const listarPedido=async()=>{
   const listaPedido = await model.listarTodosPedido();
   return listaPedido;
 }
+export const listaPedidoProduto =async()=>{
+  const lista = await model.listarTodosPedidoProdutos()
+  return lista
+}

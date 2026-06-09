@@ -35,9 +35,9 @@ export const buscarPedido=async(data)=>{
 }
 
 
-//todos pedidos
-/*export const listarTodosPedido=async()=>{
+//todos pedidos com seu produtos
+export const listarTodosPedidoProdutos=async()=>{
   const[encontado]= await db.query("select p.nomeP,p.tel,p.endereco,p.data,p.codigo,p.estado,prod.nome, prod.preco,prod.qtd,(prod.preco*prod.qtd) as subTolal from pedido p inner join pedido_produto pedir on pedir.id_ped =p.id_ped inner join produto prod on prod.id_prod =pedir.id_prod");
   return encontado|| null;
-}*/
+}
 

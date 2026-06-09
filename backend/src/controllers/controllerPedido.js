@@ -29,4 +29,17 @@ return res.status(500).json({message: "erro no servidor, tenta mais tarde"});
 }
 });
 
+//lista os pedidos
+controller.get("/listar_pedProd", async(req,res)=>{
+try{
+const lista = await servico.listaPedidoProduto();
+return res.status(200).json(lista);
+
+}catch(e){
+console.log(e)
+return res.status(500).json({message: "erro no servidor, tenta mais tarde"});
+}
+});
+
+
 export default controller;
