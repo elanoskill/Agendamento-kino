@@ -435,7 +435,7 @@ button {
 
 /* Efeito Zoom Suave para Frente */
 .categoria-card:hover {
-    transform: scale(1.08) translateY(-5px);
+    transform: scale(1.05) translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     z-index: 5;
 }
@@ -873,14 +873,14 @@ footer {
     width: 300px;
     margin: 2px 5px;
     padding: 10px;
-    border: 1px orangered solid;
+    border: 1px #ff6A00 solid;
     background-color: rgb(219, 205, 179);
     border-radius: 50px;
 }
 .form_pesquisar button {
     height: 35px;
     width: 80px;
-    background-color: orangered;
+    background-color: #ff6A00;
     padding: 10px;
     border-radius: 10px;
 }
