@@ -262,11 +262,13 @@ function cssProd() {
     const card = document.createElement("div");
     card.className = "prod-card";
     card.dataset.id = p.id_prod;
+    
 
     const imgSrc = p.img;
 
     card.innerHTML = `
-      <img class="prod-img" alt="${p.nome}"/>
+      <img class="prod-img" alt="${p.nome} " src="${p.img}"/>
+      
       <div class="prod-info">
         <div class="prod-name">${p.nome}</div>
         <div class="prod-desc">${p.descricao || "—"}</div>
@@ -287,6 +289,7 @@ function cssProd() {
         </div>
       </div>
     `;
+  
 
     //src depois do innerHTML
     const img = card.querySelector(".prod-img");
@@ -394,7 +397,7 @@ function openEditModal(id) {
   document.getElementById("editNome").value = p.nome;
   document.getElementById("editDesc").value = p.descricao;
   document.getElementById("editPreco").value = p.preco;
-  document.getElementById("editRequerQtd").value = p.requerQtd ?? 0;
+  document.getElementById("editRequerQtd").value = p.qtd ?? 0;
   editCatSelected = p.id_cat;
   editCatLbl.textContent = p.categoria || "selecionar categoria";
 

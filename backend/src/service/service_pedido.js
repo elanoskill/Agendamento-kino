@@ -17,13 +17,13 @@ novo.push(itemP)
 }
 }
 }
-//criar pedido
+//criar codigo secreto de consulta
 const cod = Math.random().toString(36).substring(2, 8).toUpperCase();
 const pedido = await model.criar_pedido({nome, telefone, endereco, cod})
 const id_ped=pedido;
 //pegando produtos do namco
 const listaProdutos = await serviceProduto.listarProdutos();
-//atualizar a wuantidade de produto no webkitCancelAnimationFrame
+//atualizar a quantidade de produto no stock
 for (const prod of listaProdutos){
 for (const p of novo){
 if(p.id_prod==prod.id_prod){
@@ -34,7 +34,8 @@ prod.nome,
 prod.img,
 prod.preco,
 prod.descricao,
-(prod.qtd-p.qtd))
+(prod.qtd-p.qtd),
+prod.id_cat)
 }else{
   throw new Error("Pordutos esgotado")
 }}}}
