@@ -1,46 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../../public/kino.svg">
-   <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="login.css">
     <title>Login</title>
 </head>
-<body>   
+
+<body>
     <!--div que contem a imgem do delivery-->
     <div class="img">
         <!-- aqui esta a imagem do homem da byke-->
 
     </div>
-         <!-- div formulario-->
+    <!-- div formulario-->
     <div class=" formulario">
         <!--Logo do kino-->
         <img src="../../../public/kino (1).svg" alt="logotipo do kino" width="80px" height="80px" id="logo">
         <H1>Iniciar Sessão</H1>
         <!--formulario de login, com oss seus respetivos campos-->
         <form id="form">
-             <label for="user">Usuário</label>
-             <input type="text" id="user" placeholder="Introduza dados de Usuário" required>
-        <label for="senha">Palavra-passe</label>
-        <input type="password" id="senha" placeholder="Introduza palavra-passe de Usuário" autocomplete="no" required>
-        <button type="submit" id="btn"><div class="load"><div class="loading"></div></div>Entrar</button>
-        <p>Esqueci palavra-passe <a href="#">clica aqui</a></p>
-        <!--Div para sessao de outra forma, face ou google
+            <label for="user">Usuário</label>
+            <input type="text" id="user" placeholder="Seu nome" required>
+            <label for="senha">Palavra-passe</label>
+            <input type="password" id="senha" placeholder="Sua palavra-passe" autocomplete="no"
+                required>
+            <button type="submit" id="btn">
+                <div class="load">
+                    <div class="loading"></div>
+                </div>entrar
+            </button>
+            <p>Esqueci palavra-passe <a href="#">clica aqui</a></p>
+            <!--Div para sessao de outra forma, face ou google
         <div class="logarFaceGoogle">
             <a href="#"><img src="../../icons/facebook.svg" alt="icon facebook" width="40px" height="40px"></a>
             <a href="#" ><img src="../../icons/google-circle.svg" alt="icon google" width="40px" height="40px"></a>
         </div>-->
         </form>
-        
-     <!--  <p>Não tem conta? <a href="#" id="criar">Criar</a></p>--> 
-       
-    </div>     
-        <!--Div que vai mostrar notificação de erro de login-->
-     <div class="notificacao">
+
+        <!--  <p>Não tem conta? <a href="#" id="criar">Criar</a></p>-->
+
+    </div>
+    <!--Div que vai mostrar notificação de erro de login-->
+    <div class="notificacao">
         <p>Erro, senha ou usuário errado!</p>
     </div>
-     
+
     <script src="login.js"></script>
 </body>
 
