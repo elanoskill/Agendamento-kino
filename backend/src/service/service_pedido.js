@@ -60,3 +60,9 @@ export const listaPedidoProduto =async()=>{
   const lista = await model.listarTodosPedidoProdutos()
   return lista
 }
+//servico aceitar pedido
+export const aceitarPedido=async(data)=>{
+console.log(data)
+const res =await model.aceitarPedido(data)
+  return res
+}

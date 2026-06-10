@@ -21,6 +21,14 @@ return pedido;
 
 }
 
+// funcao com sql para aceitar pedido
+export const aceitarPedido = async (data)=>{
+const {id_user,id_ped,estado,tempo}=data;
+await db.query("update pedido set id_user=?,estado=?,tempo=? where id_ped=?", [id_user,estado,tempo,id_ped]);
+return {message:"pedido aceite"}
+
+}
+
 // funcao com sql para buscar todos pedido
 export const listarTodosPedido = async()=>{
 const [lista] = await db.query("select  *from pedido");
@@ -37,7 +45,7 @@ export const buscarPedido=async(data)=>{
 
 //todos pedidos com seu produtos
 export const listarTodosPedidoProdutos=async()=>{
-  const[encontado]= await db.query("select p.nomeP,p.tel,p.endereco,p.data,p.codigo,p.estado,prod.nome, prod.preco,prod.qtd,(prod.preco*prod.qtd) as subTolal from pedido p inner join pedido_produto pedir on pedir.id_ped =p.id_ped inner join produto prod on prod.id_prod =pedir.id_prod");
+  const[encontado]= await db.query("select p.id_ped, p.nomeP,p.tel,p.endereco,p.data,p.codigo,p.estado,prod.nome, prod.preco,prod.qtd,(prod.preco*prod.qtd) as subTolal from pedido p inner join pedido_produto pedir on pedir.id_ped =p.id_ped inner join produto prod on prod.id_prod =pedir.id_prod");
   return encontado|| null;
 }
 

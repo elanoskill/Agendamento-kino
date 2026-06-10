@@ -40,6 +40,19 @@ console.log(e)
 return res.status(500).json({message: "erro no servidor, tenta mais tarde"});
 }
 });
+//controller aceitar pedido
+controller.put("/aceitar_pedido/:id",async(req,res)=>{
+  const id_ped=req.params.id;
+  const {id_usuario,tempoMinutos,estado}=req.body;
+  try{
+    const aceite = await servico.aceitarPedido({id_ped,id_user:id_usuario,tempo:tempoMinutos,estado});
+  res.status(200).json({message:"aceite"})
+  }catch(e){
+    console.log(e)
+    res.status(500).json({message:"Erro no servidor"})
+    
+  }
+})
 
 
 export default controller;

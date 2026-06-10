@@ -79,7 +79,8 @@ controller.post("/login", async (req, res) => {
     });
     return res.status(200).json({token,user:{
       perfil:user.perfil,
-      nome:fun.nome
+      nome:fun.nome,
+      id:user.id_user
     }});
   } catch (e) {
     console.log(e);
